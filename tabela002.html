@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes &#x1F603</title>
+    <style>
+        body {
+            background-image: url(imagens/cidade.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.356);
+
+        }
+
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            margin: auto;
+            position: relative; /*Configuração necessária para o cabeçalho rolar com a tela*/
+        }
+
+        caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            padding: 5px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.356);
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+        }
+
+        td:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        thead , tfoot {
+            color: white;
+            background-image: linear-gradient(to top, rgb(64, 64, 250)
+            , blue);
+        }
+
+        thead > tr > th{
+            position: sticky; /*O cabeçalho gruda na tabela*/
+            top: -1px; /*Posição em pixel onde o cabeçalho fica grudado no topo*/
+            background-image: linear-gradient(to top, rgb(64, 64, 250)
+            , blue);
+        } /*Importante: manter a cor de fundo do <th> original*/
+
+        tbody {
+            background-image: linear-gradient(to bottom, rgb(102, 171, 192), rgb(221, 232, 235))
+        }
+
+        tr:nth-child(2n) {/*Pseudo-classe que seleciona determinado (nth) filho*/
+            background-color: rgb(75, 122, 192);
+        } /*Efeito zebrado*/
+
+        .num {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    <!-- Anatomia de Tabelas Grandes
+    <table>
+        <caption> = título 
+        <thead> = cabeça
+            <tr>, <th>, <td>
+        <tbody> = corpo
+            <tr>, <th>, <td>
+        <tfoot> = rodapé
+            <tr>, <th>, <td> -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!-- Título do escopo coluna. Para identificação dos mecanismos de busca -->
+                <th scope="col" style="width: 150px;">População</th> <!-- É possível configurar a largua da coluna com style="width" -->
+                <th scope="col" style="width: 150px;">%</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46.024.937</td>
+                <td class="num">22,2%</td>
+            </tr>
+            <tr>
+                <td>Minas Geais</td>
+                <td class="num">20.732.660</td>
+                <td class="num">10,0%</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.615.526</td>
+                <td class="num">8,0%</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.659.023</td>
+                <td class="num">7,1%</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.835.5379</td>
+                <td class="num">5,7%</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.088.065</td>
+                <td class="num">5,3%</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.051.113</td>
+                <td class="num">4,4%</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.936.431</td>
+                <td class="num">4,3%</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.442.962</td>
+                <td class="num">4,1%</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+                <td class="num">3,7%</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6.950.976</td>
+                <td class="num">3,3%</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.800.605</td>
+                <td class="num">3,3%</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4.108.508</td>
+                <td class="num">1,9%</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4.030.961</td>
+                <td class="num"d>1,9%</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.952.262</td>
+                <td class="num">1,9%</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.784.239</td>
+                <td class="num">1,8%</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.303.953</td>
+                <td class="num">1,6%</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.270.174</td>
+                <td class="num">1,6%</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.125.254</td>
+                <td class="num">1,5%</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2.923.369</td>
+                <td class="num">1,4%</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.833.742</td>
+                <td class="num">1,4%</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.211.868</td>
+                <td class="num">1,1%</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.616.379</td>
+                <td class="num">0,8%</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.584.306</td>
+                <td class="num">0,8%</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">829.780</td>
+                <td class="num">0,4%</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">774.268</td>
+                <td class="num">0,4%</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">634.805</td>
+                <td class="num">0,3%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th> <!-- Escopo para linha, 
+                    já que o total refere-se ao número ao lado na tabela -->
+                <td class="num"><strong>207.883.699</strong></td>
+                
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
