@@ -1,2 +1,2 @@
 # ex023
- Ex. do Curso em Vídeo
+ Ex. do Curso em Vídeo - Tabelas
